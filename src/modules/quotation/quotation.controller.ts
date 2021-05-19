@@ -1,5 +1,6 @@
-import { Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { Observable, of } from 'rxjs';
+import { QuotationModel } from 'src/models/quotation.model';
 import { QuotationService } from './quotation.service';
 
 @Controller('quotation')
@@ -20,15 +21,15 @@ export class QuotationController {
 
   // create a new quotation
   @Post()
-  addQuotation(quotation: any): any {
+  addQuotation(@Body() quotation: QuotationModel): any {
+    console.log({ quotation });
+
     return this.quotationService.addQuotation(quotation);
   }
 
   // delete quotation by id
   @Delete(':id')
   deleteQuotation(@Param('id') id: number): Observable<string> {
-    console.log('delete');
-
     return of(this.quotationService.deleteQuotation(id));
   }
 }
