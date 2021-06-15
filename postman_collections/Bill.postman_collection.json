@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "7773b55e-78ec-42f0-8834-3ca16bc9ef4f",
+		"name": "Bill",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetBills",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{base_route}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{base_route}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBill",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{base_route}}/{{id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{base_route}}",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddBill",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{base_route}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{base_route}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBill",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{base_route}}/{{id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{base_route}}",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000"
+		},
+		{
+			"key": "base_route",
+			"value": "bill"
+		},
+		{
+			"key": "id",
+			"value": "22"
+		}
+	]
+}

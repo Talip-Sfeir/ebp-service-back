@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { QuotationModel } from 'src/models/quotation.model';
 
 @Injectable()
 export class QuotationService {
@@ -10,7 +11,7 @@ export class QuotationService {
     return '[Quotation] getQuotation' + id;
   }
 
-  addQuotation(quotation: any): string {
+  addQuotation(quotation: QuotationModel): string {
     return '[Quotation] addQuotation' + quotation;
   }
 
